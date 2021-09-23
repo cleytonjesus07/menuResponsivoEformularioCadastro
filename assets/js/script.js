@@ -1,36 +1,36 @@
-const pathImgsCities = '../assets/images/';
-const pathImgsFlags = "../assets/images/flags/";
+const pathImgsCities = './assets/images/';
+
 const cities = [
     {
         nameCity: "New York",
         description: "A cidade de Nova York compreende 5 distritos situados no encontro do rio Hudson com o Oceano Atlântico. No centro da cidade fica Manhattan, um distrito com alta densidade demográfica que está entre os principais centros comerciais, financeiros e culturais do mundo. Entre seus pontos emblemáticos, destacam-se arranha-céus, como o Empire State Building, e o enorme Central Park.",
-        img: `${pathImgsCities}newYork.jpg`,
-        flag: `${pathImgsFlags}eua.jpg`
+        img: `${pathImgsCities}newYork-min.jpg`,
+       
     },
     {
         nameCity: "Madrid",
         description: "Madri, a capital da Espanha, situada no centro do país, é uma cidade de avenidas elegantes e parques grandes e bem cuidados, como o Buen Retiro. Ela é famosa pelos ricos acervos de arte europeia, entre os quais estão as obras de Goya, Velázquez e outros mestres espanhóis no Museu do Prado. O centro da antiga Madri da época da Casa de Habsburgo é a Plaza Mayor, ladeada por pórticos, e nas proximidades ficam o barroco Palácio Real e o Arsenal Real, que exibe armas históricas.",
-        img: `${pathImgsCities}madrid.jpg`
+        img: `${pathImgsCities}madrid-min.jpg`
     },
     {
         nameCity: "Coimbra",
         description: "Coimbra, uma cidade à beira-rio no centro de Portugal e antiga capital do país, alberga uma cidade velha medieval preservada e a histórica Universidade de Coimbra. Construída no local de um antigo palácio, a Universidade é célebre pela sua biblioteca barroca, a Biblioteca Joanina, e pela sua torre do sino do século XVIII. Na cidade velha encontra-se a catedral românica do século XII, a Sé Velha. ",
-        img: `${pathImgsCities}coimbra.jpg`
+        img: `${pathImgsCities}coimbra-min.jpg`
     },
     {
         nameCity: "Tóquio",
         description: "Tóquio, a movimentada capital do Japão, combina o estilo ultramoderno com o tradicional, desde arranha-céus iluminados por neon a templos históricos. O opulento santuário xintoísta Meiji é conhecido por seu altíssimo portão e pelas florestas circundantes. O Palácio Imperial fica localizado em meio a jardins públicos. Os muitos museus da cidade oferecem exposições que variam de arte clássica (no Museu Nacional de Tóquio) a um teatro kabuki reconstruído (no Museu Edo-Tokyo). ",
-        img: `${pathImgsCities}Tokyo.jpg`
+        img: `${pathImgsCities}Tokyo-min.jpg`
     },
     {
         nameCity: "São Paulo",
         description: "São Paulo, centro financeiro do Brasil, está entre as cidades mais populosas do mundo, com diversas instituições culturais e uma rica tradição arquitetônica. Há prédios simbólicos como a catedral neogótica, o Edifício Martinelli, um arranha-céu inaugurado em 1929, e o Edifício Copan, com suas linhas curvas projetadas pelo arquiteto modernista Oscar Niemeyer. A igreja em estilo colonial do Pátio do Colégio marca o local onde os padres jesuítas fundaram a cidade em 1554. ",
-        img: `${pathImgsCities}saoPaulo.jpg`
+        img: `${pathImgsCities}saoPaulo-min.jpg`
     },
     {
         nameCity: "Hong Kong",
         description: "Hong Kong, ex-colônia britânica, é um território autônomo no sudeste da China. Seu centro urbano vibrante e densamente povoado é também um porto importante e um centro financeiro global de destaque, com um horizonte marcado por arranha-céus. O distrito comercial exibe monumentos arquitetônicos como a Torre do Bank of China, de I. M. Pei. Hong Kong é também um destino importante para compras, famoso pela alfaiataria sob medida e pelo Mercado Noturno da Rua do Templo.",
-        img: `${pathImgsCities}hongKong.jpg`
+        img: `${pathImgsCities}hongKong-min.jpg`
     }
 ]
 let citiesCounter = 0
