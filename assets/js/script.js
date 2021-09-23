@@ -31,6 +31,11 @@ const cities = [
         nameCity: "Hong Kong",
         description: "Hong Kong, ex-colônia britânica, é um território autônomo no sudeste da China. Seu centro urbano vibrante e densamente povoado é também um porto importante e um centro financeiro global de destaque, com um horizonte marcado por arranha-céus. O distrito comercial exibe monumentos arquitetônicos como a Torre do Bank of China, de I. M. Pei. Hong Kong é também um destino importante para compras, famoso pela alfaiataria sob medida e pelo Mercado Noturno da Rua do Templo.",
         img: `${pathImgsCities}hongKong-min.jpg`
+    },
+    {
+        nameCity: "Buenos Aires",
+        description: "Buenos Aires é a capital cosmopolita da Argentina. Seu centro é a Praça de Maio, com imponentes edifícios do século 19, como a Casa Rosada, o emblemático palácio presidencial com sacadas. Outras importantes atrações são o Teatro Colón, uma casa de ópera inaugurada em 1908 com cerca de 2.500 lugares, e o moderno museu MALBA, com sua coleção de arte latino-americana.",
+        img: `${pathImgsCities}buenosAires-min.jpg`
     }
 ]
 let citiesCounter = 0
@@ -160,7 +165,10 @@ function myEvents() {
         if (document.querySelector(".menu-mobile").children.length === 1) {
             document.querySelector(".menu-mobile").insertAdjacentElement("afterbegin", menu);
         }
-        document.querySelector(".menu-mobile").style.right = 0;
+        document.querySelector(".menu-mobile").style.display = "flex";
+        setTimeout(() => {
+            document.querySelector(".menu-mobile").style.opacity = 1;
+        }, 500);
         document.querySelector(".menu-mobile > ul li:nth-child(4) a").addEventListener("click", () => {
             containerModal.setAttribute("style", "display:flex");
             setTimeout(() => {
@@ -171,7 +179,10 @@ function myEvents() {
     })
 
     document.querySelector(".menu-mobile button").addEventListener("click", () => {
-        document.querySelector(".menu-mobile").style.right = "-50vw";
+        document.querySelector(".menu-mobile").style.opacity = 0;
+        setTimeout(() => {
+            document.querySelector(".menu-mobile").style.display = "none";    
+        }, 500);
     })
 
     const inputsDisabled = form.querySelectorAll(".container-inputs fieldset:nth-child(2) input:disabled");
