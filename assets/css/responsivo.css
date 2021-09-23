@@ -1,0 +1,41 @@
+@media (max-width:768px) {
+  .menu{
+      display: none;
+  }
+
+  .btn-hamburguer{
+      display: flex;
+      margin-right: 30px;
+  }
+
+  .btn-hamburguer svg{
+      width: 30px;
+      height: 30px;
+  }
+
+  .infoCidade{
+     
+     overflow: auto;
+      margin-right: 30px;
+  }
+
+  .menu-mobile{
+      position: absolute;
+    display: flex;
+    height: 100vh;
+    background-color: #121212db;
+    right: -50vw;
+    align-items: center;
+   width: 50vw;
+   transition: linear 300ms;
+}
+
+.menu-mobile button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+}
+

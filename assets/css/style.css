@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+p{
+    font-size: 1em;
+    line-height: 25px;
+}
+
+
+
+/* Nav menu */
+.container{
+    position: fixed;
+    top: 0;
+    background:linear-gradient(to right, #121212,transparent);
+    width: 100%;
+    height: 50px;
+}
+
+.navmenu{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navmenu .logo{
+    margin-left: 30px;
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+.logo svg:hover{
+    animation: logoAnimation 1s alternate forwards;
+    
+}
+
+@keyframes logoAnimation {
+        100%{
+            position: relative;
+            transform: rotate(90deg);
+            
+        }
+}
+
+.logo > h2{
+    color: #fff;
+    margin-left: 20px;
+}
+
+.btn-hamburguer{
+    display: none;
+}
+
+.menu{
+    margin-right: 30px;
+    display: flex;
+}
+
+.selected{
+    text-decoration: underline;
+}
+
+.menu ul,.menu-mobile ul{
+    display: flex;
+    width: inherit;
+    list-style: none;
+}
+
+.menu-mobile ul{
+    flex-direction: column;
+    height: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.menu ul li a, .menu-mobile ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+}
+
+.menu ul > *:not(li:last-child) a:hover {
+   animation: opacityMenu 500ms alternate infinite;
+}
+
+@keyframes opacityMenu {
+        100%{
+            opacity: 0;
+        }
+}
+
+ul > li:last-child a{
+    background-color: #0a9b0a;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+ul > li:last-child a:hover{
+    background-color: #fff;
+    color: #0a9b0a;
+    transition: ease 300ms;
+}
+/* Main container */
+
+.mainContainer{
+    background-color: #121212;
+    height: 100vh;
+    background-image:url("../images/newYork.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    transition: ease 900ms background-image;
+}
+
+.infoCidade{
+    background-color: #121212bf;
+    max-width: 500px;
+    margin-left: 30px;
+    padding:20px;
+    color: #fff;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.infoCidade #nameCity{
+    margin: 20px 0;
+}
+
+.infoCidade #infoCity{
+    text-align: justify;
+}
+
+.infoCidade #infoCity::first-letter{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+/* Loading Screen */
+
+.loadingScreen{
+    background-color: #121212;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: linear 2s;
+}
+
+.loadingScreen > h2{
+    color: #fff;
+    margin-top: 20px;
+    animation: fadeInOut 1.5s infinite alternate;
+}
+
+.loader{
+    border-radius: 100%;
+    border-left: #fff solid 1px;
+    width: 100px;
+    height: 100px;
+    animation: rotateLoader 1.5s infinite;
+}
+
+@keyframes rotateLoader{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* modal */
+
+.container-modal{
+    display: flex;
+    position: absolute;
+    background-color: #1212129a;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: linear 300ms;
+    opacity: 0;
+}
+
+.modal{
+    display: flex;
+ 
+    justify-content: center;
+  
+background-color: #12121246;
+width: 700px;
+border-radius: 10px;
+padding: 10px;
+position: relative;
+}
+
+
+
+.form,.form-result{
+    display: flex;
+    flex-direction: column;
+    transition: linear 300ms;
+   
+}
+
+
+
+.form-result{
+    display: none;
+    opacity: 0;
+}
+
+.container-inputs{
+    display: flex;
+    margin:20px 0;
+    justify-content: space-around;
+  
+}
+
+.close-modal,.menu-mobile button{
+   cursor: pointer;
+    position: absolute;
+    right:0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+  
+    transition: linear 300ms;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.close-modal:hover,.menu-mobile button:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.container-inputs fieldset,.form-result fieldset{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin: 0 20px;
+    border-radius: 5px;
+  
+}
+
+.form-result fieldset{
+    height: 500px;
+    width: 250px;
+}
+
+.form-result fieldset label{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+.form-result fieldset label p{
+    margin-left: 20px;
+}
+
+
+
+.container-inputs fieldset > * {
+    color: #fff;
+}
+
+.container-inputs fieldset:nth-child(1) >*{
+    flex: 1;
+}
+
+.container-inputs fieldset input{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #12121246;
+    outline: none;
+}
+
+.container-inputs fieldset input::placeholder{
+    font-size: 14px;
+}
+
+.container-inputs fieldset input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.container-inputs fieldset input:disabled{
+    background-color:#12121246;
+}
+
+.form fieldset label{
+    display: flex;
+    flex-direction: column;
+}
+
+.form fieldset > *:not(legend){
+    margin-bottom: 10px;
+}
+
+.form fieldset input{
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+.form button{
+    background-color: #0a9b0a;
+    padding: 10px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 1px 1px 2px #121212;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+   
+    transition: linear 300ms;
+}
+
+.form .btn-submit > button:hover{
+    background-color: #fff;
+    color: #0a9b0a;
+    cursor: pointer;
+}
+
+.btn-submit{
+    display: flex;
+}
+
+.form-result{
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+
+
+.menu-mobile{
+    display: none;
+}

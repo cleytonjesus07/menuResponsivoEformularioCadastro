@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <script src="./assets/js/script.js" defer></script>
+    <title>PI - Online - Menu Responsivo + Formulário </title>
+</head>
+<body>
+    <div class="loadingScreen">
+        <div class="loader"></div>
+        <h2>Loading...</h2>
+    </div>
+    <div class="container-modal">
+        <div class="modal">
+            <button class="close-modal" title="Fechar formulário">X</button>
+            <form class="form" method="POST">
+                <div class="container-inputs">
+                    
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        <label for="nome">Nome:
+                            <input type="text" name="nome" id="nome" maxlength="100" placeholder="Nome completo" required>
+                        </label>
+                        <label for="email">Email:
+                            <input type="email" name="email" id="email" maxlength="100" placeholder="placeholder@placeholder.com" required>
+                        </label>
+                        <label for="cpf">CPF:
+                            <input type="text" name="cpf" onblur="maskCpfCep(this)" id="cpf" maxlength="14" placeholder="xxx.xxx.xxx - xx" required>
+                        </label>
+                        <label for="telefone">
+                            Telefone:
+                            <input type="tel" onblur="maskTel(this)" name="telefone" maxlength="9" id="telefone" placeholder="xxxx - xxxx" required>
+                        </label>
+                        <label for="celular">
+                            Celular:
+                            <input type="tel" onblur="maskTel(this)"  name="celular" id="celular" maxlength="10" placeholder="xxxxx - xxxx" required>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço Residêncial</legend>
+                        <label for="cep">
+                            CEP:
+                            <input type="text" name="cep" onblur="maskCpfCep(this)" id="cep" maxlength="8" placeholder="xxxxx - xxx" required>
+                        </label>
+                        <label for="logradouro">
+                            Logradouro:
+                            <input type="text" name="logradouro" id="logradouro" readonly required disabled>
+                        </label>
+                        <label for="numero">
+                            Número:
+                            <input type="tel" name="numero" id="numero" maxlength="20" required>
+                        </label>
+                        <label for="complemento">
+                            Complemento:
+                            <input type="text" name="complemento" id="complemento" required>
+                        </label>
+                        <label for="bairro">
+                            Bairro:
+                            <input type="text" name="bairro" id="bairro" readonly required disabled>
+                        </label>
+                        <label for="cidade">
+                            Cidade:
+                            <input type="text" name="cidade" id="cidade" readonly required disabled>
+                        </label>
+                        <label for="estado">
+                            Estado:
+                           <input type="text" name="estado" id="estado" readonly required disabled>
+                        </label>
+                    </fieldset>
+                </div>
+               
+                <div class="btn-submit">
+                     <button> Cadastrar </button> 
+                </div>
+            </form>
+            <div class="form-result">
+                <div class="container-inputs">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                    <label>Nome:
+                        <p id="nome">nome</p>
+                    </label>
+                    <label for="email">Email:
+                        <p id="email">email</p>
+                    </label>
+                    <label for="cpf">CPF:
+                        <p id="cpf">cpf</p>
+                    </label>
+                    <label for="telefone">
+                        Telefone:
+                        <p id="tel">telefone</p>
+                    </label>
+                    <label for="celular">
+                        Celular:
+                        <p id="cel">celular</p>
+                    </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço Residêncial</legend>
+                        <label for="cep">
+                            CEP:
+                            <p id="cep">cep</p>
+                        </label>
+                        <label for="logradouro">
+                            Logradouro:
+                            <p id="logradouro">logradouro</p>
+                        </label>
+                        <label for="numero">
+                            Número:
+                            <p id="numero">numero</p>
+                        </label>
+                        <label for="complemento">
+                            Complemento:
+                            <p id="complemento">complemento</p>
+                        </label>
+                        <label for="bairro">
+                            Bairro:
+                            <p id="bairro">bairro</p>
+                        </label>
+                        <label for="cidade">
+                            Cidade:
+                           <p id="cidade">cidade</p>
+                        </label>
+                        <label for="estado">
+                            Estado:
+                           <p id="estado">estado</p>
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="container">
+        <nav class="navmenu">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><g><path d="M22,16v-2l-8.5-5V3.5C13.5,2.67,12.83,2,12,2s-1.5,0.67-1.5,1.5V9L2,14v2l8.5-2.5V19L8,20.5L8,22l4-1l4,1l0-1.5L13.5,19 v-5.5L22,16z"/><path d="M0,0h24v24H0V0z" fill="none"/></g></svg>
+                <h2>Air Milhas</h2>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="selected"><a href="#">Home</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="btn-hamburguer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-mobile">
+        <button>X</button>
+    </div>
+
+    <main class="mainContainer">
+        <div class="infoCidade">
+            <h2 id="nameCity">Initializing...</h2>
+            <p id="infoCity">
+                Initializing...
+            </p>
+        </div>
+       
+    </main>
+
+  
+</body>
+</html>
